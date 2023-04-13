@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+    <title>According component</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 24px;
+        height: 100vh;
+        text-align: center;
+        font-weight: bold;
+
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr; /*1FR - OCUPPIED ALL EMPTY SPACE*/
+      }
+
+      nav,
+      menu, 
+      section, 
+      main {
+        padding-top: 24px;
+      }
+      
+      nav {
+        background-color: #0d71d5;
+        color: #fff;
+        grid-row: 1 / -1;
+      }
+
+      menu {
+        background-color: #0c141d;
+        grid-column: 2/ -1;
+      }
+
+      section {
+        background-color: #343a44;
+      }
+
+      main {
+        background-color: #08152c;
+      }
+
+      aside {
+        background-color: #4a729a;
+
+      }
+
+      
+
+    </style>
+  </head>
+
+  <body>
+    <!-- NAV is using for the site 
+    and  MENU is used for a web application-->
+    <nav>Nav</nav>
+    <menu>Menu</menu>
+    <section>Inbox</section>
+    <main>Email view</main>
+    <aside>Additional info:</aside> 
+  </body>
+</html>
