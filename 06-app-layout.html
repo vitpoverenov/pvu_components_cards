@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-    <title>According component</title>
+    <title>App Layout component</title>
     <style>
       * {
         margin: 0;
@@ -27,13 +27,12 @@
         grid-template-rows: 80px 1fr; /*1FR - OCUPPIED ALL EMPTY SPACE*/
       }
 
-      nav,
-      menu, 
+      nav, 
       section, 
       main {
         padding-top: 24px;
       }
-      
+
       nav {
         background-color: #0d71d5;
         color: #fff;
@@ -41,24 +40,62 @@
       }
 
       menu {
-        background-color: #0c141d;
+        background-color: #4d8acf;
         grid-column: 2/ -1;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 0 40px;
+      } 
+
+      button {
+        display: inline-block;
+
+        font-size: 16px;
+        background-color: #5f3dc4;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        color: #fff;
+        padding: 8px 12px;
+      }
+
+      button:last-child {
+        margin-left: auto;
+        background-color: #0d71d5;
+
       }
 
       section {
         background-color: #343a44;
+        padding: 40px;
+        
+        overflow: scroll;
+
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
       }
 
       main {
-        background-color: #08152c;
+        background-color: #3973d8;
       }
 
       aside {
         background-color: #4a729a;
-
       }
 
-      
+      .email {
+        background-color: #888;
+        height: 96px;
+        flex-shrink: 0;
+        
+        display:flex;
+        align-items: center; /*Выравнивает по центру колонка*/
+        justify-content: center; /*Выравнивает по линии*/
+      }
 
     </style>
   </head>
@@ -67,8 +104,25 @@
     <!-- NAV is using for the site 
     and  MENU is used for a web application-->
     <nav>Nav</nav>
-    <menu>Menu</menu>
-    <section>Inbox</section>
+    <menu>
+      <button>News</button>
+      <button>Reply</button>
+      <button>Forward</button>
+      <button>Mark as unread</button>
+      <button>Trash</button>
+    </menu>
+    <section>
+      <div class="email">Email 1</div>
+      <div class="email">Email 2</div>
+      <div class="email">Email 3</div>
+      <div class="email">Email 4</div>
+      <div class="email">Email 5</div>
+      <div class="email">Email 6</div>
+      <div class="email">Email 7</div>
+      <div class="email">Email 8</div>
+      <div class="email">Email 9</div>
+      <div class="email">Email 10</div>
+    </section>
     <main>Email view</main>
     <aside>Additional info:</aside> 
   </body>
